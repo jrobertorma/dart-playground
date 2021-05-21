@@ -1,8 +1,8 @@
 import "dart:math";
 import "dart:io";
 
-List basicList() {
-  List simpleList = [1, 2, 3, 44];
+List basicList(List simpleList) {
+  // List simpleList = [1, 2, 3, 44];
 
   simpleList.add(22);
 
