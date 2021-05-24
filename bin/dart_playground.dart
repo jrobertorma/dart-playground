@@ -3,6 +3,7 @@ import 'package:dart_playground/variables.dart' as variables;
 
 import 'package:dart_playground/lists.dart' as lists;
 import 'package:dart_playground/function_tests.dart' as function_tests;
+import 'package:dart_playground/oop_examples.dart' as oop_examples;
 
 void main(List<String> arguments) {
   // print('Hello world: ${dart_playground.calculate()}!');
@@ -24,6 +25,12 @@ void main(List<String> arguments) {
   var fullGreeting =
       function_tests.fancyGreeting('Bob', lastname: 'Squarepants');
   print(fullGreeting);
+
+  oop_examples.Person somePerson = new oop_examples.Person();
+  somePerson.firstName = "Alba";
+  somePerson.lastName = "Trueba";
+
+  print(somePerson.getFullName());
 }
 
 /**
