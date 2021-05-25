@@ -31,6 +31,20 @@ void main(List<String> arguments) {
   somePerson.lastName = "Trueba";
 
   print(somePerson.getFullName());
+
+  /// We also have  the double dot/cascade notation, syntactic sugar, which allows us to chain
+  /// a sequence of operations on the same object
+  oop_examples.Person anotherPerson = new oop_examples.Person()
+    ..firstName = "Pepe"
+    ..lastName = "Cussirat";
+
+  print(anotherPerson.getFullName());
+
+  /// Class instance with constructor, you need to provide the required fields
+  oop_examples.PersonWithConstructor yetAnotherPerson =
+      new oop_examples.PersonWithConstructor("Gabriela", "Infante");
+
+  print(yetAnotherPerson.getFullName());
 }
 
 /**

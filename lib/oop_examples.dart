@@ -9,3 +9,20 @@ class Person {
 
   String getFullName() => '$firstName $lastName';
 }
+
+class PersonWithConstructor {
+  String firstName;
+  String lastName;
+
+  /// Constructor with mandatory arguments
+  /// We can also use the equivalent shortcut syntax
+  /// Person(this.firstName, this.lastName);
+  /// We can omit the constructor body as it only sets the class field
+  /// values without any additional setup applied to it.
+  PersonWithConstructor(String firstName, String lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  String getFullName() => '$firstName $lastName';
+}
