@@ -26,7 +26,7 @@ void main(List<String> arguments) {
       function_tests.fancyGreeting('Bob', lastname: 'Squarepants');
   print(fullGreeting);
 
-  oop_examples.Person somePerson = new oop_examples.Person();
+  oop_examples.PersonChild somePerson = new oop_examples.PersonChild();
   somePerson.firstName = "Alba";
   somePerson.lastName = "Trueba";
 
@@ -34,19 +34,27 @@ void main(List<String> arguments) {
 
   /// We also have  the double dot/cascade notation, syntactic sugar, which allows us to chain
   /// a sequence of operations on the same object
-  oop_examples.Person anotherPerson = new oop_examples.Person()
+  oop_examples.PersonChild anotherPerson = new oop_examples.PersonChild()
     ..firstName = "Pepe"
     ..lastName = "Cussirat";
 
   print(anotherPerson.getFullName());
+  print(anotherPerson);
 
   /// Class instance with constructor, you need to provide the required fields
   oop_examples.PersonWithConstructor yetAnotherPerson =
       new oop_examples.PersonWithConstructor("Gabriela", "Infante");
 
-  print(yetAnotherPerson.getFullName());
-}
+  print(yetAnotherPerson.fullName);
 
-/**
- * https://dart.dev/guides/language/language-tour#functions
- */
+  oop_examples.Student randomStudent = new oop_examples.Student(
+      "Francisco", "Aldebarán", "Paco Aldebarán, terror de Cuévano");
+
+  print(randomStudent); // same as calling randomStudent.toString()
+
+  oop_examples.implementedStudent anotherStudent =
+      new oop_examples.implementedStudent(
+          "Rubén", "Darío", "El príncipe de las letras hispánicas");
+
+  print(anotherStudent);
+}
