@@ -52,9 +52,18 @@ void main(List<String> arguments) {
 
   print(randomStudent); // same as calling randomStudent.toString()
 
+  //using interfaces
   oop_examples.implementedStudent anotherStudent =
       new oop_examples.implementedStudent(
           "Rubén", "Darío", "El príncipe de las letras hispánicas");
 
   print(anotherStudent);
+
+  //using mixins
+  oop_examples.SeniorDeveloper seniorDev = new oop_examples.SeniorDeveloper(
+      "Alan", "Turing", "The father of computer science");
+
+  print(seniorDev);
+  seniorDev.coding(); //mixin methods
+  seniorDev.manage(); //mixin methods
 }

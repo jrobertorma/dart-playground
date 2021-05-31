@@ -94,3 +94,30 @@ class implementedStudent implements PersonWithConstructor {
   @override
   String toString() => '$fullName, also known as $nickName, yoyoyo';
 }
+
+/// We can also use mixins in Dart
+/// In OOP, mixins are a way to include functionalities on a class without the need for
+/// associations between the parts, such as inheritance.
+///
+/// So for example, some people may have specific skills and common skills.
+/// Mixins can be ideal for this use case because we can add
+/// the skills to a profession without the need to extend a common, more generic class or
+/// implement an interface in each one. As the implementation would probably be the same, it
+/// would cause code duplications
+
+class ProgrammingSkills {
+  coding() {
+    print("Writing code");
+  }
+}
+
+class ManagementSkills {
+  manage() {
+    print("Managing project");
+  }
+}
+
+class SeniorDeveloper extends Student with ProgrammingSkills, ManagementSkills {
+  SeniorDeveloper(String firstName, String lastName, String nickName)
+      : super(firstName, lastName, nickName);
+}
