@@ -3,6 +3,12 @@ import 'package:dart_playground/variables.dart' as variables;
 
 import 'package:dart_playground/lists.dart' as lists;
 import 'package:dart_playground/function_tests.dart' as function_tests;
+
+/// We can add 'prefixes' to our import statement, so in case there library
+/// with a duplicated class or method name there are no conflicts
+/// just like the 'alias' principle in SQL, we are also importing the
+/// library using the 'package' aproach, we specify the library path
+/// from the package root.
 import 'package:dart_playground/oop_examples.dart' as oop_examples;
 
 void main(List<String> arguments) {
