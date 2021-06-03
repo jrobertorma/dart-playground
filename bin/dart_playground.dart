@@ -11,6 +11,8 @@ import 'package:dart_playground/function_tests.dart' as function_tests;
 /// from the package root.
 import 'package:dart_playground/oop_examples.dart' as oop_examples;
 
+import 'package:dart_playground/person/person.dart' as person;
+
 void main(List<String> arguments) {
   // print('Hello world: ${dart_playground.calculate()}!');
 
@@ -72,4 +74,12 @@ void main(List<String> arguments) {
   print(seniorDev);
   seniorDev.coding(); //mixin methods
   seniorDev.manage(); //mixin methods
+
+  //using libraries and protected data
+  person.Programmer programmer =
+      person.Programmer(firstName: "Dennis", lastName: "Ritchie");
+
+  /// cannot access the _type property, it is private to person library
+  /// programmer._type = PersonType.employee;
+  print(programmer);
 }
