@@ -7,6 +7,13 @@ library person;
 /// You must define every part with the 'part of' statement (see the files)
 /// This is probably going to change (I don't know why T.T) so don't get fond
 /// on this synthax LOL
+///
+/// We can use 'import' instead, to allow a programmer class extend a
+/// person class you must import it first (just like we do in the
+/// bin\dart_playground.dart file), there is also the 'export' statement
+/// that let us pass the smaller libraries a bigger one needs to the
+/// 'customer' importer, so you don't need to import all of them, just
+/// the big one lol (see the exportPerson library)
 part 'person_types.dart';
 part 'programmer.dart';
 part 'student.dart';
